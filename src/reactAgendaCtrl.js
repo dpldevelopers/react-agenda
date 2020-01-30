@@ -217,11 +217,11 @@ render() {
         <form onSubmit={this.handleEdit}>
           <div className="agendCtrls-label-wrapper">
             <div className="agendCtrls-label-inline">
-              <label>Event name</label>
-              <input type="text" name="name" autoFocus ref="eventName" className="agendCtrls-event-input" value={this.state.name} onChange={this.handleChange.bind(this)} placeholder="Event Name"/>
+              <label>Type</label>
+              <input type="text" name="name" autoFocus ref="eventName" className="agendCtrls-event-input" value={this.state.name} onChange={this.handleChange.bind(this)} placeholder="Type"/>
             </div>
             <div className="agendCtrls-label-inline ">
-              <label>Color</label>
+              <label>Locations</label>
               <div className="agendCtrls-radio-wrapper">
                 {colors}</div>
             </div>
@@ -249,11 +249,11 @@ render() {
       <form onSubmit={this.handleSubmit}>
         <div className="agendCtrls-label-wrapper">
           <div className="agendCtrls-label-inline">
-            <label>Event name</label>
-            <input type="text" ref="eventName" autoFocus name="name" className="agendCtrls-event-input" value={this.state.name} onChange={this.handleChange.bind(this)} placeholder="Event Name"/>
+            <label>Type</label>
+            <input type="text" ref="eventName" autoFocus name="name" className="agendCtrls-event-input" value={this.state.name} onChange={this.handleChange.bind(this)} placeholder="Type"/>
           </div>
           <div className="agendCtrls-label-inline">
-            <label>Color</label>
+            <label>Locations</label>
             <div className="agendCtrls-radio-wrapper">
               {colors}</div>
           </div>
