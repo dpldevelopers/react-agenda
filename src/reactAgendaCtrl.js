@@ -195,6 +195,22 @@ handleEdit(e) {
   this.updateEvent(e);
 }
 
+createSelectItems(str) {
+  let items = [];         
+  for (let i = 0; i <= this.props.maxValue; i++) {             
+       items.push(<option key={i} value={i}>{str+" "+i}</option>);   
+       //here I will be creating my options dynamically based on
+       //what props are currently passed to the parent component
+  }
+  return items;
+}  
+
+onDropdownSelected(e) {
+ console.log("THE VAL", e.target.value);
+ //here you will see the current selected value of the select input
+}
+
+
 render() {
   var itc = Object.keys(this.props.itemColors)
   var colors = itc.map(function(item, idx) {
@@ -218,10 +234,15 @@ render() {
           <div className="agendCtrls-label-wrapper">
             <div className="agendCtrls-label-inline">
               <label>Type</label>
-              <input type="text" name="name" autoFocus ref="eventName" className="agendCtrls-event-input" value={this.state.name} onChange={this.handleChange.bind(this)} placeholder="Type"/>
+              <input type="select" onChange={this.onDropdownSelected} label="Multiple Select1" multiple>
+                {this.createSelectItems('Type_')}
+              </input>
             </div>
             <div className="agendCtrls-label-inline ">
               <label>Locations</label>
+              <input type="select" onChange={this.onDropdownSelected} label="Multiple Select2" multiple>
+                {this.createSelectItems('Loc_')}
+              </input>
               <div className="agendCtrls-radio-wrapper">
                 {colors}</div>
             </div>
@@ -250,10 +271,16 @@ render() {
         <div className="agendCtrls-label-wrapper">
           <div className="agendCtrls-label-inline">
             <label>Type</label>
+            <input type="select" onChange={this.onDropdownSelected} label="Multiple Select3" multiple>
+                {this.createSelectItems('Type')}
+            </input>
             <input type="text" ref="eventName" autoFocus name="name" className="agendCtrls-event-input" value={this.state.name} onChange={this.handleChange.bind(this)} placeholder="Type"/>
           </div>
           <div className="agendCtrls-label-inline">
             <label>Locations</label>
+            <input type="select" onChange={this.onDropdownSelected} label="Multiple Select4" multiple>
+                {this.createSelectItems('Loc')}
+            </input>
             <div className="agendCtrls-radio-wrapper">
               {colors}</div>
           </div>
