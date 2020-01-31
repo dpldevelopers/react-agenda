@@ -234,17 +234,21 @@ render() {
           <div className="agendCtrls-label-wrapper">
             <div className="agendCtrls-label-inline">
               <label>Type</label>
-              <input type="select" onChange={this.onDropdownSelected} label="Multiple Select1" multiple>
-                {this.createSelectItems('Type_')}
-              </input>
+              <select>
+              <option value="grapefruit">Grapefruit</option>
+              <option value="lime">Lime</option>
+              <option selected value="coconut">Coconut</option>
+              <option value="mango">Mango</option>
+            </select>
             </div>
             <div className="agendCtrls-label-inline ">
               <label>Locations</label>
-              <input type="select" onChange={this.onDropdownSelected} label="Multiple Select2" multiple>
-                {this.createSelectItems('Loc_')}
-              </input>
-              <div className="agendCtrls-radio-wrapper">
-                {colors}</div>
+              <select>
+              <option value="grapefruit">Grapefruit</option>
+              <option value="lime">Lime</option>
+              <option selected value="coconut">Coconut</option>
+              <option value="mango">Mango</option>
+            </select>
             </div>
           </div>
           <div className="agendCtrls-timePicker-wrapper">
@@ -274,15 +278,21 @@ render() {
             <input type="select" onChange={this.onDropdownSelected} label="Multiple Select3" multiple>
                 {this.createSelectItems('Type')}
             </input>
-            <input type="text" ref="eventName" autoFocus name="name" className="agendCtrls-event-input" value={this.state.name} onChange={this.handleChange.bind(this)} placeholder="Type"/>
+            <select>
+              <option value="grapefruit">Grapefruit</option>
+              <option value="lime">Lime</option>
+              <option selected value="coconut">Coconut</option>
+              <option value="mango">Mango</option>
+            </select>
           </div>
           <div className="agendCtrls-label-inline">
             <label>Locations</label>
-            <input type="select" onChange={this.onDropdownSelected} label="Multiple Select4" multiple>
-                {this.createSelectItems('Loc')}
-            </input>
-            <div className="agendCtrls-radio-wrapper">
-              {colors}</div>
+            <select>
+              <option value="grapefruit">Grapefruit</option>
+              <option value="lime">Lime</option>
+              <option selected value="coconut">Coconut</option>
+              <option value="mango">Mango</option>
+            </select>
           </div>
         </div>
         <div className="agendCtrls-timePicker-wrapper">
